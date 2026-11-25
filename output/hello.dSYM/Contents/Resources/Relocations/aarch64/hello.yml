@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/nabagohar/Desktop/netlab/output/hello'
+relocations:     []
+...
