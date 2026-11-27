@@ -5,8 +5,7 @@ if (argc < 4) { std::cerr << "Usage: frame_client HOST PORT MSG...\n";
 return 2; }
 try {
 net::Runtime runtime;
-net::Socket s = net::tcp_
-connect(argv[1], argv[2]);
+net::Socket s = net::tcp_connect(argv[1], argv[2]);
 for (int i = 3; i < argc; ++i) {
 if (!net::send_msg(s.get(), argv[i])) { std::cerr << "send failed\n";
     return 1; }

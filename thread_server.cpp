@@ -23,8 +23,7 @@ int main(int argc, char** argv) {
 const char* port = (argc > 1) ? argv[1] : "5000";
 try {
 net::Runtime runtime;
-net::Socket listener = net::tcp_
-listen(port);
+net::Socket listener = net::tcp_listen(port);
 std::cout << "Threaded echo server on port " << port << "\n";
 for (;;) {
 net::Socket client(accept(listener.get(), nullptr, nullptr));
