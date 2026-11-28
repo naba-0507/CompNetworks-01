@@ -19,7 +19,7 @@
 
 #include <winsock2.h>
 #include <ws2tcpip.h>
-
+#pragma comment(lib, "ws2_32.lib")
 using socket_t = SOCKET;
 using sock_len = int;
 
@@ -88,7 +88,7 @@ inline std::string error_text(int code) {
     }
 
     while (!s.empty() &&
-           (s.back() == '\r' || s.back() == '\n')) {
+           (s.back() == '\r' || s.back() == '\n' || s.back() == ' ' )) {
         s.pop_back();
     }
 
